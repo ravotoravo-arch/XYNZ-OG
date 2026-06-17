@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #050507;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    background-color: rgba(5, 5, 7, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #ff3333;
+    text-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #a1a1a6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links .discord-btn {
+    background-color: #5865F2;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-links .discord-btn:hover {
+    background-color: #4752c4;
+    transform: translateY(-1px);
+    color: #ffffff;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 51, 51, 0.05) 0%, transparent 50%), 
+                radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero-content .highlight {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #86868b;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #050507;
+}
+
+.btn-primary:hover {
+    background-color: #e8e8ed;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.status-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 60px 8%;
+    background-color: #0b0b0e;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.status-card {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 24px 40px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 240px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: border-color 0.3s;
+}
+
+.status-card:hover {
+    border-color: rgba(255, 51, 51, 0.1);
+}
+
+.status-card h3 {
+    font-size: 12px;
+    color: #86868b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.status-card p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f5f5f7;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.offline {
+    background-color: #ff3333;
+    box-shadow: 0 0 12px #ff3333;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #050507;
+    font-size: 12px;
+    color: #6e6e73;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 40px; }
+    .status-section { flex-direction: column; }
+}
